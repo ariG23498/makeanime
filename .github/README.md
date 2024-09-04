@@ -35,8 +35,8 @@ You can use the `makeanime` CLI to generate images. The tool accepts the followi
 $ makeanime \
 --image_url "https://example.com/your-face-image.jpg" \
 --prompt "a man" \
--s 0.7 \
--f 0.3
+--style_weight 0.7 \
+--face_weight 0.3
 ```
 
 This command will generate an anime-style image based on the provided face image URL and prompt. The resulting image will be saved as `output.png` in the working directory.
@@ -63,4 +63,4 @@ This command will generate an anime-style image based on the provided face image
 
 ## References
 
-The code is taken from the [Hugging Face IP-Adapter Blog Post](https://huggingface.co/docs/diffusers/main/en/using-diffusers/ip_adapter)
+The code is taken from the [Hugging Face IP-Adapter Guide](https://huggingface.co/docs/diffusers/main/en/using-diffusers/ip_adapter)
