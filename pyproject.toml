@@ -1,0 +1,25 @@
+[project]
+name = "makeanime"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=0.34.0",
+    "diffusers>=0.30.2",
+    "fire>=0.6.0",
+    "makeanime",
+    "ruff>=0.6.3",
+    "torch>=2.4.0",
+    "transformers>=4.44.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+makeanime = { workspace = true }
+
+[project.scripts]
+makeanime = "makeanime.__main__:app"
