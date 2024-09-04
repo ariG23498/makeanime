@@ -24,7 +24,7 @@ $ pip install -Uq git+https://github.com/ariG23498/makeanime
 
 You can use the `makeanime` CLI to generate images. The tool accepts the following arguments:
 
-- `image_url`: URL of the face image to be stylized.
+- `image`: URL of the face image to be stylized.
 - `prompt`: Text prompt to guide the image generation.
 - `style_weight`: (Optional) A float that controls how much the anime style influences the image. Default is `0.5`.
 - `face_weight`: (Optional) A float that controls how much the face image influences the result. Default is `0.5`.
@@ -33,7 +33,7 @@ You can use the `makeanime` CLI to generate images. The tool accepts the followi
 
 ```bash
 $ makeanime \
---image_url "https://example.com/your-face-image.jpg" \
+--image "https://example.com/your-face-image.jpg" \
 --prompt "a man" \
 --style_weight 0.7 \
 --face_weight 0.3

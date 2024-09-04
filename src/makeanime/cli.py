@@ -6,7 +6,11 @@ from diffusers.utils import load_image, make_image_grid
 
 
 def main(
-    image_url: str, prompt: str, style_weight: float = 0.5, face_weight: float = 0.5, is_gradio : bool = False
+    image,
+    prompt: str,
+    style_weight: float = 0.5,
+    face_weight: float = 0.5,
+    is_gradio: bool = False,
 ):
     image_encoder = CLIPVisionModelWithProjection.from_pretrained(
         "h94/IP-Adapter",
@@ -31,7 +35,7 @@ def main(
     pipeline.set_ip_adapter_scale([style_weight, face_weight])
     pipeline.enable_model_cpu_offload()
 
-    face_image = load_image(image_url)
+    face_image = image if is_gradio else load_image(image)
 
     style_folder = (
         "https://huggingface.co/datasets/ariG23498/images/resolve/main/anime-style"
@@ -51,6 +55,9 @@ def main(
         generator=generator,
     ).images[0]
 
+    if is_gradio:
+        return image
+
     image = make_image_grid(
         [
             face_image.resize((512, 512)),
@@ -59,8 +66,7 @@ def main(
         rows=1,
         cols=2,
     )
-    if is_gradio:
-        return image
+
     image.save("output.png")
 
 

@@ -8,6 +8,7 @@ dependencies = [
     "accelerate>=0.34.0",
     "diffusers>=0.30.2",
     "fire>=0.6.0",
+    "gradio>=4.42.0",
     "makeanime",
     "ruff>=0.6.3",
     "torch>=2.4.0",
