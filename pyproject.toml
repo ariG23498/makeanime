@@ -22,4 +22,4 @@ build-backend = "hatchling.build"
 makeanime = { workspace = true }
 
 [project.scripts]
-makeanime = "makeanime.__main__:app"
+makeanime = "makeanime.cli:app"
