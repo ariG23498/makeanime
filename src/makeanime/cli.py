@@ -5,7 +5,9 @@ from transformers import CLIPVisionModelWithProjection
 from diffusers.utils import load_image, make_image_grid
 
 
-def main(image_url: str, prompt: str, style_weight: float = 0.5, face_weight: float = 0.5):
+def main(
+    image_url: str, prompt: str, style_weight: float = 0.5, face_weight: float = 0.5
+):
     image_encoder = CLIPVisionModelWithProjection.from_pretrained(
         "h94/IP-Adapter",
         subfolder="models/image_encoder",

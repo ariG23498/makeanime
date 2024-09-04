@@ -1,5 +1,7 @@
 # makeanime
 
+![image](output.png)
+
 `makeanime` is a CLI tool for generating anime-style images from a face image and a text prompt using Stable Diffusion XL and an IP-Adapter for applying anime-like styles.
 
 ## Features
@@ -12,18 +14,9 @@
 
 ## Installation
 
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/makeanime.git
-    cd makeanime
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+```shell
+$ pip install -Uq git+https://github.com/ariG23498/makeanime
+```
 
 ## Usage
 
@@ -37,7 +30,11 @@ You can use the `makeanime` CLI to generate images. The tool accepts the followi
 ### Example Command
 
 ```bash
-python -m makeanime --image_url "https://example.com/your-face-image.jpg" --prompt "anime warrior, fantasy background" --style_weight 0.7 --face_weight 0.3
+$ makeanime \
+--image_url "https://example.com/your-face-image.jpg" \
+--prompt "a man" \
+-s 0.7 \
+-f 0.3
 ```
 
 This command will generate an anime-style image based on the provided face image URL and prompt. The resulting image will be saved as `output.png` in the working directory.
@@ -56,7 +53,7 @@ This command will generate an anime-style image based on the provided face image
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.10+
 - PyTorch
 - Diffusers
 - Transformers
@@ -64,4 +61,4 @@ This command will generate an anime-style image based on the provided face image
 
 ## References
 
-The code is taken from [Hugging Face IP-Adapter Blog Post](https://huggingface.co/docs/diffusers/main/en/using-diffusers/ip_adapter)
+The code is taken from the [Hugging Face IP-Adapter Blog Post](https://huggingface.co/docs/diffusers/main/en/using-diffusers/ip_adapter)
