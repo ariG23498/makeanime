@@ -1,5 +1,7 @@
 # makeanime
 
+<a href="https://colab.research.google.com/gist/ariG23498/645f0f276612a60fb32ad2b387e0d301/scratchpad.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+
 ![image](output.png)
 
 `makeanime` is a CLI tool for generating anime-style images from a face image and a text prompt using Stable Diffusion XL and an IP-Adapter for applying anime-like styles.
