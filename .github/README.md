@@ -1,6 +1,6 @@
 # makeanime
 
-<a href="https://colab.research.google.com/gist/ariG23498/645f0f276612a60fb32ad2b387e0d301/scratchpad.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+[![Generic badge](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://huggingface.co/spaces/ariG23498/makeanime) [![Generic badge](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/ariG23498/645f0f276612a60fb32ad2b387e0d301/scratchpad.ipynb)
 
 ![image](output.png)
 
