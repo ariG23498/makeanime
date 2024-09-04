@@ -1,8 +1,9 @@
+import spaces
 import gradio as gr
 from functools import partial
 from makeanime.cli import main
 
-generate_image = partial(main, is_gradio=True)
+generate_image = spaces.GPU(partial(main, is_gradio=True), duration=120)
 
 with gr.Blocks() as demo:
     gr.Markdown("# makeanime: Turn your image into an anime")
